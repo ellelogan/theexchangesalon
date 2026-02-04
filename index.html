@@ -106,17 +106,17 @@
 
         /* Header */
         header {
-            padding: 3rem 0 1.5rem;
+            padding: 4rem 0 3.5rem;
             text-align: center;
             animation: fadeInDown 1s ease-out;
         }
 
         .logo {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 4.5rem;
+            font-size: 6.5rem;
             font-weight: 300;
             color: var(--deep-burgundy);
-            letter-spacing: 0.05em;
+            letter-spacing: 0.08em;
             margin-bottom: 0.5rem;
             line-height: 1;
         }
@@ -127,12 +127,16 @@
             text-transform: uppercase;
             color: var(--warm-terracotta);
             font-weight: 400;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--sage);
+            display: inline-block;
         }
 
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 4rem 0 6rem;
+            padding: 2.5rem 0 6rem;
             animation: fadeIn 1.2s ease-out 0.3s both;
         }
 
@@ -852,86 +856,67 @@
 
         /* Theme Suggestion Box */
         .suggestions {
-            background: var(--cream);
-            padding: 4rem 0;
+            background: transparent;
+            padding: 3rem 0 4rem;
             text-align: center;
         }
 
         .suggestions-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            color: var(--deep-burgundy);
-            margin-bottom: 1rem;
-            font-weight: 400;
-        }
-
-        .suggestions-subtitle {
-            font-size: 1rem;
+            font-size: 1.1rem;
             color: var(--charcoal);
-            margin-bottom: 2rem;
-            opacity: 0.8;
+            margin-bottom: 1.25rem;
             font-weight: 300;
+            opacity: 0.6;
+            font-style: italic;
         }
 
         .suggestion-form {
-            max-width: 600px;
+            max-width: 500px;
             margin: 0 auto;
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
         }
 
         .suggestion-input {
-            width: 100%;
-            padding: 1rem 1.5rem;
-            border: 2px solid rgba(92, 58, 58, 0.2);
-            background: white;
-            font-size: 1rem;
+            flex: 1;
+            padding: 0.5rem 1rem;
+            border: 1px solid rgba(92, 58, 58, 0.15);
+            background: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
             font-family: 'Montserrat', sans-serif;
-            margin-bottom: 1rem;
             transition: all 0.3s ease;
-            resize: vertical;
-            min-height: 100px;
+            font-weight: 300;
         }
 
         .suggestion-input:focus {
             outline: none;
             border-color: var(--sage);
+            background: white;
         }
 
         .suggestion-submit {
-            padding: 1rem 2.5rem;
-            background: var(--deep-burgundy);
-            color: white;
-            border: 2px solid var(--deep-burgundy);
-            font-size: 1rem;
-            letter-spacing: 0.1em;
+            padding: 0.5rem 1.25rem;
+            background: transparent;
+            color: var(--charcoal);
+            border: 1px solid rgba(92, 58, 58, 0.2);
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
             cursor: pointer;
             transition: all 0.3s ease;
             font-family: 'Montserrat', sans-serif;
-            font-weight: 500;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .suggestion-submit::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: var(--sage);
-            transition: left 0.4s ease;
-            z-index: -1;
-        }
-
-        .suggestion-submit:hover::before {
-            left: 0;
+            font-weight: 400;
+            white-space: nowrap;
+            opacity: 0.7;
         }
 
         .suggestion-submit:hover {
             background: var(--sage);
             border-color: var(--sage);
-            transform: translateY(-2px);
+            color: white;
+            opacity: 1;
         }
 
         /* Footer */
@@ -997,7 +982,7 @@
         /* Responsive */
         @media (max-width: 768px) {
             .logo {
-                font-size: 3rem;
+                font-size: 3.5rem;
             }
 
             .hero-title {
@@ -1226,11 +1211,10 @@
 
         <section class="suggestions">
             <div class="container">
-                <h2 class="suggestions-title">Have a Theme You'd Like to Request?</h2>
-                <p class="suggestions-subtitle">We welcome your ideas for future salon topics and themes</p>
+                <p class="suggestions-title">Have a theme idea? Share it with us</p>
                 <form class="suggestion-form" action="#" method="post">
-                    <textarea class="suggestion-input" placeholder="Share your theme idea here..." required></textarea>
-                    <button type="submit" class="suggestion-submit">Submit Idea</button>
+                    <input type="text" class="suggestion-input" placeholder="Your theme suggestion..." required>
+                    <button type="submit" class="suggestion-submit">Submit</button>
                 </form>
             </div>
         </section>
